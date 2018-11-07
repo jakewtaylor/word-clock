@@ -1,0 +1,15 @@
+.cell {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font);
+    font-weight: 300;
+    font-size: 5rem;
+    color: var(--text-default);
+    text-align: center;
+    align-self: center;
+}
+
+.cell.lit {
+    color: var(--text-lit);
+    font-weight: 500;
+}
