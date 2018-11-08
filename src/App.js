@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useTime } from './hooks/time';
+import { useTitleChanger } from './hooks/titleChanger';
 import { randomString } from './helpers/randomString';
 
 import Cell from './Cell';
@@ -11,6 +12,7 @@ const randoms = [1, 6, 2, 2, 1, 1, 1, 3, 1].map(n => randomString(n));
 
 const App = () => {
     const time = useTime();
+    useTitleChanger(time);
 
     const minute = Math.round(time.minute() / 5) * 5;
     const hour = time.hour();
