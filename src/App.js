@@ -31,7 +31,7 @@ const App = () => {
 
                 <Cell content="twenty" lit={minute === 20 || minute === 40 || minute === 25 || minute === 35} />
                 <Cell content={randoms[4]} />
-                <Cell content="five" lit={minute === 25 || minute === 35} />
+                <Cell content="five" lit={minute === 25 || minute === 35 || minute === 5 || minute === 55} />
 
                 <Cell content="half" lit={minute === 30} />
                 <Cell content={randoms[5]} />
