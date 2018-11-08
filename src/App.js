@@ -8,7 +8,7 @@ import Cell from './Cell';
 
 import './App.css';
 
-const randoms = [1, 6, 2, 2, 1, 1, 1, 3, 1].map(n => randomString(n));
+const randoms = [1, 6, 2, 2, 1, 1, 1, 2, 1, 1].map(n => randomString(n));
 
 const App = () => {
     const time = useTime();
@@ -30,8 +30,8 @@ const App = () => {
                 <Cell content={randoms[3]} />
 
                 <Cell content="twenty" lit={minute === 20 || minute === 40 || minute === 25 || minute === 35} />
-                <Cell content="five" lit={minute === 25 || minute === 35} />
                 <Cell content={randoms[4]} />
+                <Cell content="five" lit={minute === 25 || minute === 35} />
 
                 <Cell content="half" lit={minute === 30} />
                 <Cell content={randoms[5]} />
@@ -39,8 +39,9 @@ const App = () => {
                 <Cell content={randoms[6]} />
                 <Cell content="to" lit={minute > 30} />
 
-                <Cell content="past" lit={minute < 30 && minute !== 0} />
                 <Cell content={randoms[7]} />
+                <Cell content="past" lit={minute <= 30 && minute !== 0} />
+                <Cell content={randoms[8]} />
                 <Cell content="nine" lit={hour === 9 || hour === 21} />
 
                 <Cell content="one" lit={hour === 1 || hour === 13} />
@@ -58,7 +59,7 @@ const App = () => {
                 <Cell content="twelve" lit={hour === 12 || hour === 0} />
 
                 <Cell content="ten" lit={hour === 10 || hour === 22} />
-                <Cell content={randoms[8]} />
+                <Cell content={randoms[9]} />
                 <Cell content="o'clock" lit={minute === 0} />
             </div>
         </div>

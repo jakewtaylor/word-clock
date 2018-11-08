@@ -11,6 +11,8 @@
 
 .wall-clock {
     height: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(10, 1fr);
