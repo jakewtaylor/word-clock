@@ -16,4 +16,5 @@
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    position: relative;
 }

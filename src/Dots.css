@@ -1,0 +1,31 @@
+.dot {
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    background: var(--text-default);
+    position: absolute;
+}
+
+.dot.dot-1 {
+    left: -1rem;
+    top: -1rem;
+}
+
+.dot.dot-2 {
+    top: -1rem;
+    right: -1rem;
+}
+
+.dot.dot-3 {
+    bottom: -1rem;
+    right: -1rem;
+}
+
+.dot.dot-4 {
+    bottom: -1rem;
+    left: -1rem;
+}
+
+.dot.lit {
+    background: var(--text-lit);
+}

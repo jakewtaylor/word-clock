@@ -5,6 +5,7 @@ import { useTitleChanger } from './hooks/titleChanger';
 import { randomString } from './helpers/randomString';
 
 import Cell from './Cell';
+import Dots from './Dots';
 
 import './App.css';
 
@@ -14,8 +15,10 @@ const App = () => {
     const time = useTime();
     useTitleChanger(time);
 
-    const minute = Math.round(time.minute() / 5) * 5;
+    const minute = Math.floor(time.minute() / 5) * 5;
     const hour = time.hour();
+
+    const difference = time.minute() - minute;
 
     return (
         <div className="wall-clock-container">
@@ -61,6 +64,8 @@ const App = () => {
                 <Cell content="ten" lit={hour === 10 || hour === 22} />
                 <Cell content={randoms[9]} />
                 <Cell content="o'clock" lit={minute === 0} />
+
+                <Dots light={difference} />
             </div>
         </div>
     );
